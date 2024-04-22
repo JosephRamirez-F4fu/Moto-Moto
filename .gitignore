@@ -30,7 +30,4 @@
 *.exe
 *.out
 *.app
-/Motor2/x64/Debug
-/x64/Debug
-/depts/include
 /.vs
