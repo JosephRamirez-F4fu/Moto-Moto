@@ -2,6 +2,10 @@
 #include "Vertex.h"
 #include<cstddef>
 
+Sprite::Sprite()
+{
+}
+
 Sprite::~Sprite()
 {//vertex buffer id
 	if (vboID != 0) {
@@ -65,12 +69,7 @@ void Sprite::draw()
 	glDisableVertexAttribArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-}
-
-void Sprite::move(float x, float y)
-{
-	this->x = x;
-	this->y = y;
 
 }
+
 

@@ -35,7 +35,7 @@ MainGame::~MainGame()
 void MainGame::run()
 {
 	init();
-	sprite.init(-1,0,1,1);
+	sprite.init(0,-1,1,1);
 	update();
 }
 
