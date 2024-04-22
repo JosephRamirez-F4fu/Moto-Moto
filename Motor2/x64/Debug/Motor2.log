@@ -1,9 +1,4 @@
-﻿  Main.cpp
-  MainGame.cpp
-C:\Users\Joseph\source\Motores\Motor2\Motor2\MainGame.cpp(50,13): warning C4305: '+=': truncation from 'double' to 'float'
-  Sprite.cpp
-  Generating Code...
+﻿  Sprite.cpp
 Error.obj : warning LNK4099: PDB '' was not found with 'Error.obj' or at ''; linking object as if no debug info
 GLS_Program.obj : warning LNK4099: PDB '' was not found with 'GLS_Program.obj' or at ''; linking object as if no debug info
-MainGame.obj : error LNK2019: unresolved external symbol "public: __cdecl Sprite::Sprite(void)" (??0Sprite@@QEAA@XZ) referenced in function "public: __cdecl MainGame::MainGame(void)" (??0MainGame@@QEAA@XZ)
-C:\Users\Joseph\source\Motores\Motor2\x64\Debug\Motor.exe : fatal error LNK1120: 1 unresolved externals
+  Motor2.vcxproj -> C:\Users\Joseph\source\Motores\Motor2\x64\Debug\Motor.exe

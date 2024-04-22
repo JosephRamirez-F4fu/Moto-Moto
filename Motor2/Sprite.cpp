@@ -2,6 +2,10 @@
 #include "Vertex.h"
 #include<cstddef>
 
+Sprite::Sprite()
+{
+}
+
 Sprite::~Sprite()
 {//vertex buffer id
 	if (vboID != 0) {
