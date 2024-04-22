@@ -4,16 +4,17 @@ using namespace std;
 class Sprite
 {
 private:
-	float x, y;
-	int width, height;
+	
 	float vertexData;
 	GLuint vboID;
 public:
-	Sprite();
+	Sprite(float x, float y, float width, float height, GLuint vboID);
 	~Sprite();
-	void init(float x, float y, int width, int height);
+	void init();
 	void draw();
-	void move(float x, float y);
+	void cleanup();
+	float x, y;
+	float width, height;
 };
 	
 

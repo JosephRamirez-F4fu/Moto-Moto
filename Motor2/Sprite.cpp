@@ -1,44 +1,28 @@
 #include "Sprite.h"
 #include "Vertex.h"
 #include<cstddef>
+#include <iostream>
+using namespace std;
 
-Sprite::Sprite()
-{
-}
-
-Sprite::~Sprite()
-{//vertex buffer id
-	if (vboID != 0) {
-		glDeleteBuffers(1, &vboID);
-	}
-
-}
-
-void Sprite::init(float x, float y, int width, int height)
+Sprite::Sprite(float x, float y, float width, float height, GLuint vboID)
 {
 	this->x = x;
 	this->y = y;
 	this->width = width;
 	this->height = height;
+	this->vboID = vboID;
+	vertexData;
+}
 
-	if (vboID == 0) {
-		glGenBuffers(1, &vboID);
-	}
+Sprite::~Sprite()
+{
+	
+}
 
-	/*float vertexData[12];
-	vertexData[0] = x + width;
-	vertexData[1] = y + height;
-	vertexData[2] = x;
-	vertexData[3] = y + height;
-	vertexData[4] = x;
-	vertexData[5] = y;
-	vertexData[6] = x;
-	vertexData[7] = y;
-	vertexData[8] = x+width;
-	vertexData[9] = y;
-	vertexData[10] = x+width;
-	vertexData[11] = y+height;*/
+void Sprite::init()
+{
 
+	
 	Vertex vertexData[6];
 
 	vertexData[0].setPosition(x + width, y + height);
@@ -61,6 +45,11 @@ void Sprite::init(float x, float y, int width, int height)
 
 void Sprite::draw()
 {
+	if (vboID == 0) {
+		std::cerr << "VBO no inicializado." << std::endl;
+		return;
+	}
+
 	glBindBuffer(GL_ARRAY_BUFFER, vboID);
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex,position));
@@ -68,8 +57,12 @@ void Sprite::draw()
 	glDrawArrays(GL_TRIANGLES, 0, 6);
 	glDisableVertexAttribArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-
 }
 
 
+void Sprite::cleanup() {
+	if (vboID != 0) {
+		glDeleteBuffers(1, &vboID);
+		vboID = 0;
+	}
+}
