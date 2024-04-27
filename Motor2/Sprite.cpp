@@ -11,7 +11,6 @@ Sprite::Sprite(float x, float y, float width, float height, GLuint vboID)
 	this->width = width;
 	this->height = height;
 	this->vboID = vboID;
-	vertexData;
 }
 
 Sprite::~Sprite()
@@ -37,6 +36,13 @@ void Sprite::init()
 	}
 	vertexData[1].setColor(0, 255, 0, 255);
 	vertexData[4].setColor(255, 0, 0, 255);
+
+	vertexData[0].setUV(1.0f, 1.0f);
+	vertexData[1].setUV(0.0f, 1.0f);
+	vertexData[2].setUV(0.0f, 0.0f);
+	vertexData[3].setUV(0.0f, 0.0f);
+	vertexData[4].setUV(1.0f, 0.0f);
+	vertexData[5].setUV(1.0f, 1.0f);
 
 	glBindBuffer(GL_ARRAY_BUFFER, vboID);
 	glBufferData(GL_ARRAY_BUFFER,sizeof(vertexData),vertexData , GL_STATIC_DRAW);

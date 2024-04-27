@@ -14,9 +14,22 @@ struct Color{
 
 };
 
+struct UV
+{
+	float u;
+	float v;
+
+};
+
 struct Vertex {
 	Position position;
 	Color color;
+	UV uv;
+
+	void setUV(float u, float v) {
+		uv.u = u;
+		uv.v = v;
+	}
 
 	void setPosition(float x, float y) {
 		position.x = x;
