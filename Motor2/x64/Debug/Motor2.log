@@ -1,4 +1,3 @@
-﻿  Sprite.cpp
-Error.obj : warning LNK4099: PDB '' was not found with 'Error.obj' or at ''; linking object as if no debug info
-GLS_Program.obj : warning LNK4099: PDB '' was not found with 'GLS_Program.obj' or at ''; linking object as if no debug info
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Motor2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Sprite.cpp
   Motor2.vcxproj -> C:\Users\Joseph\source\Motores\Motor2\x64\Debug\Motor.exe

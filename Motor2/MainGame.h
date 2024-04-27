@@ -4,6 +4,8 @@
 #include <iostream>
 #include "Sprite.h"
 #include "GLS_Program.h"
+#include <ctime>
+#include <vector>
 using namespace std;
 
 enum class GameState {
@@ -15,7 +17,10 @@ enum class GameState {
 class MainGame {
 
 private:
-	Sprite sprite;
+	vector<Sprite> sprites;
+	time_t timer;
+	int selected_position;
+	GLuint nextVboID;
 	int width;
 	int height;
 	SDL_Window* window;
@@ -31,6 +36,9 @@ public:
 	void run();
 	void draw();
 	void update();
+	void addSprite();
+	void drawSprite();
+	void clearSprites();
 
 
 };
