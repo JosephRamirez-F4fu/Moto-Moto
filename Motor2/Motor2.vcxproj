@@ -141,8 +141,10 @@
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="picoPNG.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="TextureCache.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />
@@ -152,13 +154,15 @@
     <ClInclude Include="IOManager.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="picoPNG.h" />
+    <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="TextureCache.h" />
     <ClInclude Include="Vertex.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Shaders\colorShaderFrag.txt" />
-    <Text Include="Shaders\colorShaderVert.txt" />
+    <Text Include="Shaders\colorShaderFrag.frag" />
+    <Text Include="Shaders\colorShaderVert.vert" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitattributes" />

@@ -9,7 +9,7 @@ void GLS_Program::compileShader(const string& shaderPath, GLuint id)
 	ifstream shaderFile(shaderPath);
 	if (shaderFile.fail()) {
 		fatalError("Failed to open " + shaderPath +
-		"unavailable error");
+		" unavailable error");
 	}
 	while (getline(shaderFile, line)) {
 		filecontent += line+ "\n";
@@ -52,6 +52,8 @@ void GLS_Program::compileShaders(const string& vertexShaderFilePath, const strin
 	vertexShaderID = glCreateShader(GL_VERTEX_SHADER);
 
 	fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
+
+
 	compileShader(vertexShaderFilePath,vertexShaderID);
 	compileShader(fragmentShaderFilePath, fragmentShaderID);
 

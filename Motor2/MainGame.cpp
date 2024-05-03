@@ -88,6 +88,7 @@ void MainGame::addSprite()
 	vector<float> position_down_left = { -1, -1, 1, 1 };
 	vector<float> position_up_right = { 0, 0, 1, 1 };
 	vector<float> position_up_left = { 0, -1, 1, 1 };
+	vector<string> list_images = { "images/kirby_up.png", "images/franky.png", "images/brook.png", "images/chopper.png" };
 
 	vector<vector<float>> list_positions
 		= { position_down_right, position_down_left, position_up_right, position_up_left };
@@ -100,7 +101,7 @@ void MainGame::addSprite()
 		float y = position[1];
 		float w = position[2];
 		float h = position[3];
-		Sprite sprite(x, y, w, h, this->nextVboID);
+		Sprite sprite(x, y, w, h, this->nextVboID, list_images[selected_position % list_images.size()]);
 		sprite.init();
 		sprites.push_back(sprite);
 		time_t timer_new;
@@ -145,9 +146,10 @@ void MainGame::processInput()
 
 void MainGame::initShaders()
 {
-	program.compileShaders("Shaders/colorShaderVert.txt", "Shaders/colorShaderFrag.txt");
+	program.compileShaders("Shaders/colorShaderVert.vert", "Shaders/colorShaderFrag.frag");
 	program.addAttribute("vertexPosition");
 	program.addAttribute("vertexColor");
+	program.addAttribute("vertexUV");
 	program.linkShader();
 
 }

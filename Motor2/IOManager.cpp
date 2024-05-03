@@ -5,8 +5,7 @@ bool IOManager::LoadFileToBuffer(std::string filePath, std::vector<unsigned char
 {
     std::ifstream file(filePath, std::ios::binary);
     if (file.fail())
-	{
-		//fatalError("Failed to open " + filePath);
+	{		
 		return false;
 	}
 	file.seekg(0, std::ios::end);
