@@ -20,27 +20,8 @@ MainGame::MainGame()
 void MainGame::init()
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
-	if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
-		std::cerr << "Error al inicializar SDL: " << SDL_GetError() << std::endl;
-		return;
-	}
-
-	window = SDL_CreateWindow("OwO", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
-	if (window == nullptr) {
-		std::cerr << "Error al crear la ventana: " << SDL_GetError() << std::endl;
-		return;
-	}
-	SDL_GLContext glContext = SDL_GL_CreateContext(window);
-	if (glContext == nullptr) {
-		std::cerr << "Error al crear el contexto OpenGL: " << SDL_GetError() << std::endl;
-		return;
-	}
-	GLenum error = glewInit();
-	if (error != GLEW_OK) {
-		std::cerr << "Error al inicializar GLEW: " << glewGetErrorString(error) << std::endl;
-	}
-	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	window = new Window();
+	window->create("Game Engine", width, height, 0);
 	initShaders();
 
 }
@@ -68,7 +49,7 @@ void MainGame::draw()
 	time += 0.2;
 	drawSprite();
 	program.unuse();
-	SDL_GL_SwapWindow(window);
+	window->swapWindow();
 
 }
 
