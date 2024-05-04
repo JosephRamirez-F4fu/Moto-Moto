@@ -1,5 +1,7 @@
 #pragma once
 #include<SDL/SDL.h>
+#include<string>
+using namespace std;
 enum WindowFlags 
 { INVISIBLE = 0x1,FULLSCREEN = 0x2, BORDERLESS = 0x4 };
 
@@ -12,8 +14,8 @@ private:
 public:
 	Window();
 	~Window();
+	int create(string windowName, int screenWidth, int screenHeight, unsigned int currentFlags);
 	void swapWindow();
-	void clearWindow();
 	int getScreenWidth()const {
 		return screenWidth;
 	}

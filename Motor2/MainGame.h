@@ -6,12 +6,11 @@
 #include "GLS_Program.h"
 #include <ctime>
 #include <vector>
+#include "Window.h"
 using namespace std;
 
 enum class GameState {
-
 	PLAY, EXIT
-
 };
 
 class MainGame {
@@ -23,7 +22,7 @@ private:
 	GLuint nextVboID;
 	int width;
 	int height;
-	SDL_Window* window;
+	Window* window;
 	void init();
 	void processInput();
 	void initShaders();

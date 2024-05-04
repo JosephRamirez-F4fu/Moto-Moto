@@ -1,6 +1,8 @@
 #include "MainGame.h"
 #include "Sprite.h"
 
+
+
 MainGame::MainGame()
 {
 	window = NULL;
