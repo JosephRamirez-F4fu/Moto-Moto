@@ -38,6 +38,4 @@ public:
 	void addSprite();
 	void drawSprite();
 	void clearSprites();
-
-
 };
