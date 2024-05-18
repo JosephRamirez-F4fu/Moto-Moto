@@ -5,6 +5,11 @@
 
 Window::Window()
 {
+	screenHeight = 1024;
+	screenWidth = 768;
+	window = nullptr;
+
+
 }
 
 Window::~Window()
@@ -42,7 +47,7 @@ int Window::create(
 	if (error != GLEW_OK) {
 		fatalError("Could not initialize glew!");
 	}
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.0f, 1.0f, 0.0f, 1.0f);
 
 	return 0;
 }

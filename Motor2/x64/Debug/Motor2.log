@@ -1,3 +1,8 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: El directorio intermedio (x64\Debug\) contiene archivos compartidos de otro proyecto (Motor2.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
-  Window.cpp
+  MainGame.cpp
+C:\Users\Joseph\source\Motores\Motor2\Motor2\MainGame.cpp(52,13): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Users\Joseph\source\Motores\Motor2\Motor2\MainGame.cpp(132,60): warning C4244: 'argumento': conversión de 'Sint32' a 'float'; posible pérdida de datos
+C:\Users\Joseph\source\Motores\Motor2\Motor2\MainGame.cpp(132,44): warning C4244: 'argumento': conversión de 'Sint32' a 'float'; posible pérdida de datos
+  SpriteBatch.cpp
+  Generando código...
   Motor2.vcxproj -> C:\Users\Joseph\source\Motores\Motor2\x64\Debug\Motor.exe

@@ -13,6 +13,10 @@ public:
 		position = newPosition;
 		needsMatrixUpdate = true;
 	}
+	glm::vec2 getPosition() {
+		return position;
+	}
+
 	void setScale(float newScale) {
 		scale = newScale;
 		needsMatrixUpdate = true;
@@ -20,6 +24,7 @@ public:
 	glm::mat4 getCameraMatrix() { 
 		return cameraMatrix; 
 	}
+	float const getScale() { return scale; }
 
 
 private:

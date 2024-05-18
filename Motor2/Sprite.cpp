@@ -8,16 +8,19 @@ using namespace std;
 
 Sprite::Sprite(float x, float y,
 	float width, float height,
-	GLuint vboID, string texturePath)
+	 string texturePath)
 {
 	this->x = x;
 	this->y = y;
 	this->width = width;
 	this->height = height;
-	this->vboID = vboID;
+	this->vboID = NULL;
 	this->texturePath = texturePath;
 	this -> texture= ResourceManager::getTexture(texturePath);
+	this-> vertexData = NULL;
 }
+
+
 
 Sprite::~Sprite()
 {

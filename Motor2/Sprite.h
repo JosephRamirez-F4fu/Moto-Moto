@@ -13,8 +13,7 @@ private:
 	string texturePath;
 public:
 	Sprite(float x, float y,
-		float width, float height,
-		GLuint vboID, string texturePath);
+		float width, float height, string texturePath);
 	~Sprite();
 	void init();
 	void draw();
